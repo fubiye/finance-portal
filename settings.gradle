@@ -1,1 +1,3 @@
 rootProject.name = 'finance-portal'
+
+include "domain"
