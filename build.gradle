@@ -1,0 +1,18 @@
+plugins {
+	id 'java'
+}
+
+ext {
+	springBootVersion = '2.1.8.RELEASE'
+}
+
+group = 'com.biye'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+}
