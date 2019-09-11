@@ -1,7 +1,5 @@
 rootProject.name = 'finance-portal'
 
 include 'domain'
-include 'common'
-include 'ebidding'
 include 'ebidding-flow'
 
