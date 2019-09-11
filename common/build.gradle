@@ -1,6 +1,4 @@
 plugins {
-    id 'org.springframework.boot' version "${springBootVersion}"
-    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
     id 'java-library'
 }
 
@@ -14,5 +12,5 @@ repositories {
 }
 
 dependencies {
-    compile 'org.springframework:spring-context'
+    compile "org.springframework:spring-context:${springVersion}"
 }
