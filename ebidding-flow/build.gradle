@@ -1,7 +1,9 @@
 dependencies {
     compile project(':domain')
 
+    compile "org.springframework:spring-context:${springVersion}"
     compile "org.springframework:spring-web:${springVersion}"
+    compile "org.springframework:spring-webflux:${springVersion}"
     compile "io.projectreactor:reactor-core:${projectreactorVersion}"
 
 }
