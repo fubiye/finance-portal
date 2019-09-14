@@ -5,4 +5,5 @@ import reactor.core.publisher.Flux;
 
 public interface WebSocketTopicManager {
     Flux<String> getWebSocketPublisher(Identifiable identifiable);
+    void publishTo(Identifiable identifiable, String text);
 }

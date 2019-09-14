@@ -22,12 +22,12 @@ public class SimpleWebSocketHandler implements WebSocketHandler {
     public Mono<Void> handle(WebSocketSession session) {
         User user = getUser(session);
         Mono<Void> output = session.send(manager.getWebSocketPublisher(user).map(txtMsg -> session.textMessage(txtMsg)));
-        Mono<Void> input = handleReceive(session);
+        Mono<Void> input = handleReceive(user, session);
         return Mono.zip(output,input).then();
     }
 
-    public Mono<Void> handleReceive(WebSocketSession session){
-        return session.receive().doOnNext(wsMessasge ->{}).then();
+    public Mono<Void> handleReceive(User user,WebSocketSession session){
+        return session.receive().doOnNext(wsMessasge -> manager.publishTo(user,wsMessasge.getPayloadAsText())).then();
     }
 
     private List<String> ids = Arrays.asList("user1", "user2");
