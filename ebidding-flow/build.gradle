@@ -6,4 +6,6 @@ dependencies {
     compile "org.springframework:spring-webflux:${springVersion}"
     compile "io.projectreactor:reactor-core:${projectreactorVersion}"
 
+    compile "org.slf4j:slf4j-api:${slf4jVersion}"
+
 }

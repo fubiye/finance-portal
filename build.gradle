@@ -17,6 +17,7 @@ ext {
 	springBootVersion = '2.1.8.RELEASE'
 	springVersion = '5.1.9.RELEASE'
 	projectreactorVersion = '3.2.12.RELEASE'
+	slf4jVersion = '1.7.28'
 }
 
 subprojects {
