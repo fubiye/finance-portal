@@ -17,7 +17,7 @@ public class WebSocketScheduler {
 
     @Scheduled(cron = "*/5 * * * * *")
     public void keepConnection(){
-        logger.info("Start broadcasting to keep connection...");
+        logger.debug("Start broadcasting to keep connection...");
         broadcasterTopicProcessor.onNext(System.currentTimeMillis() + " - " + PING);
     }
 }
